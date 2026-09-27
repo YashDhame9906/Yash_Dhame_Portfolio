@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dev.portfolio</title>
+  <link rel="icon" type="image/png" href="Assets/Fevicol2.png" />
+  <!-- Apply saved theme before paint to avoid a flash of the wrong theme -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem('theme') === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) { }
+    })();
+  </script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="is-loading">
+
+  <!-- PRELOADER -->
+  <div id="preloader" aria-hidden="true">
+    <div class="loader-box">
+      <p class="loader-line"><span class="loader-prompt">$</span> initializing portfolio<span
+          class="loader-dots">...</span></p>
+      <p class="loader-line loader-sub">Loading modules...</p>
+      <div class="loader-bar">
+        <div class="loader-fill" id="loaderFill"></div>
+      </div>
+      <p class="loader-pct" id="loaderPct">0%</p>
+      <p class="loader-ready" id="loaderReady">&nbsp;</p>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo"><span>~/</span>Yash_Dhame</div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">🌙</button>
+      <div class="nav-status">
+        <div class="dot"></div>
+        available for Opportunities
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="container hero-inner">
+
+      <div class="hero-text">
+        <br>
+        <p class="hero-eyebrow">
+          <span class="prompt">$</span> who am i&nbsp;—&nbsp; executing ...
+        </p>
+        <br>
+        <h1 class="hero-name">
+          <span class="accent">Yash.</span><br><br>
+        </h1>
+        <p class="hero-role">
+          <span id="typedRole"></span><span class="cursor"></span>
+        </p>
+        <p class="hero-desc">
+          Full-stack developer focused on building clean, responsive, and practical web applications with modern
+          technologies.
+
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">view_projects();</a>
+          <a href="#contact" class="btn btn-ghost">./contact_me.</a>
+        </div>
+      </div>
+
+      <!-- PROFILE PHOTO — terminal-framed. Add a file named profile.jpg
+           to the project root to have it appear here automatically. -->
+      <div class="hero-photo">
+        <div class="terminal-box photo-frame" id="photoFrame">
+          <div class="tb-header">
+            <div class="tb-dot tb-red"></div>
+            <div class="tb-dot tb-yellow"></div>
+            <div class="tb-dot tb-green"></div>
+            <div class="tb-title">~ profile.jpg</div>
+          </div>
+          <div class="tb-photo-body">
+            <img src="Assets/screenshots/profile.jpg" alt="Yash Dhame" id="profileImg" />
+            <div class="photo-placeholder">
+              <span>[ no image found ]</span>
+              <span class="photo-hint">add profile.jpg to the project root</span>
+            </div>
+          </div>
+          <div class="tb-caption">Yash Dhame <span>&mdash;</span> Full-Stack Developer</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+      <div class="hero-meta">
+        <div class="hero-stat">
+          <div class="num">3*</div>
+          <div class="label">Year Student</div>
+        </div>
+        <div class="stat-div"></div>
+        <div class="hero-stat">
+          <div class="num">BE</div>
+          <div class="label">Computer Engineering</div>
+        </div>
+        <div class="stat-div"></div>
+        <div class="hero-stat">
+          <div class="num">9.17</div>
+          <div class="label">SGPA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+
+      <p class="sec-label">01 // about_me>>></p>
+
+      <h2 class="sec-title">
+        who I am.
+      </h2>
+
+      <div class="about-grid fade-in">
+
+        <!-- LEFT SIDE -->
+        <div class="about-text">
+
+          <p>
+            Hey! I'm <span class="hl">Yash Dhame</span>, <br>
+            <span class="hl">Computer Engineering student</span> and <span class="hl">Full-Stack Developer</span>
+            focused on
+            building modern & practical web applications.
+          </p>
+
+          <p> I work with <span class="hl">React</span>, <span class="hl">Node.js</span>, <span
+              class="hl">Express</span>, and <span class="hl">MongoDB</span>, while exploring <span
+              class="hl">AI</span>, <span class="hl">IoT</span>, and <span class="hl">embedded systems</span>. I also
+            enjoy <span class="hl">problem-solving</span> and improving my skills through <span class="hl">DSA in JAVA
+            </span>. </p>
+
+          <p>
+            Currently open to
+            <span class="hl">internships</span>,
+            <span class="hl">freelance projects</span>, and exciting collaboration opportunities.
+          </p>
+
+        </div>
+
+        <!-- RIGHT SIDE TERMINAL -->
+        <div class="terminal-box">
+
+          <div class="tb-header">
+            <div class="tb-dot tb-red"></div>
+            <div class="tb-dot tb-yellow"></div>
+            <div class="tb-dot tb-green"></div>
+
+            <div class="tb-title">~ info.json</div>
+          </div>
+
+          <div class="tb-body">
+
+            <span class="tb-line">
+              <span class="tb-prompt">$</span>
+              <span class="tb-cmd">yash_info.json</span>
+            </span>
+
+            <span class="tb-line tb-out">{</span>
+
+            <span class="tb-line tb-out">
+              &nbsp;&nbsp;<span class="tb-key">"name"</span>:
+              <span class="tb-str">"Yash Dhame"</span>,
+            </span>
+
+            <span class="tb-line tb-out">
+              &nbsp;&nbsp;<span class="tb-key">"role"</span>:
+              <span class="tb-str">"Full-Stack Developer"</span>,
+            </span>
+
+            <span class="tb-line tb-out">
+              &nbsp;&nbsp;<span class="tb-key">"location"</span>:
+              <span class="tb-str">"Pune, India"</span>,
+            </span>
+
+            <span class="tb-line tb-out">
+              &nbsp;&nbsp;<span class="tb-key">"stack"</span>:
+              <span class="tb-str"> "MERN-Stack"</span>,
+            </span>
+
+
+            <span class="tb-line tb-out">
+              &nbsp;&nbsp;<span class="tb-key">"status"</span>:
+              <span class="tb-val">"Open to opportunities"</span>
+            </span>
+
+            <span class="tb-line tb-out">}</span>
+
+            <span class="tb-line">
+              <span class="tb-prompt">$</span>
+              <span class="cursor"></span>
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <p class="sec-label">02 // projects>>></p>
+      <h2 class="sec-title">What I've<br>built.</h2>
+      <div class="projects-list">
+        <!-- Cafe-Ruu -->
+        <div class="proj-row fade-in">
+          <p class="proj-num">PROJECT 01>></p>
+          <div class="proj-row-card">
+            <div class="proj-row-info">
+              <div class="proj-name">Cafe-Ruu</div>
+              <p class="proj-desc">Cafe-Ruu is a responsive restaurant website featuring online food ordering, cart
+                management, table booking, and email confirmations. Built for a smooth and interactive user experience.
+              </p>
+              <div class="proj-tags">
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">EmailJS</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/YashDhame9906/Cafe-Ruu.git" class="proj-link" title="GitHub">GitHub ⌥</a>
+                <a href="https://caferuu.netlify.app" class="proj-link" title="Live">Live ↗</a>
+              </div>
+            </div>
+            <div class="proj-row-shot">
+              <img src="Assets/screenshots/cafe-ruu.png" alt="Cafe-Ruu screenshot" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <!-- SnapFeed -->
+        <div class="proj-row proj-row-reverse fade-in">
+          <p class="proj-num">PROJECT 02>></p>
+          <div class="proj-row-card">
+            <div class="proj-row-shot">
+              <img src="Assets/screenshots/snapfeed.png" alt="SnapFeed screenshot" loading="lazy">
+            </div>
+            <div class="proj-row-info">
+              <div class="proj-name">SnapFeed</div>
+              <p class="proj-desc">
+                SnapFeed is a full-stack social media web application where users can
+                create and share posts, interact with content, and explore a dynamic
+                social feed through a clean and responsive interface.
+              </p>
+              <div class="proj-tags">
+                <span class="tag">MongoDB</span>
+                <span class="tag">Express.js</span>
+                <span class="tag">React.js</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">Axios</span>
+                <span class="tag">Mongoose</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/YashDhame9906/SnapFeed_MERN_FullStack.git" class="proj-link" title="GitHub">GitHub ⌥</a>
+                <a href="https://snap-feed-mern-full-stack.vercel.app/login" class="proj-link" title="Live">Live ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Neolight -->
+        <div class="proj-row fade-in">
+          <p class="proj-num">PROJECT 03>></p>
+          <div class="proj-row-card">
+            <div class="proj-row-info">
+              <div class="proj-name">Neolight</div>
+              <p class="proj-desc">Neolight is an ESP32-based smart study lamp that uses motion detection to automate
+                lighting, display system status, and provide alerts. Built with a focus on automation & energy saving.
+              </p>
+              <div class="proj-tags">
+                <span class="tag">ESP32</span>
+                <span class="tag">Wokwi</span>
+                <span class="tag">C++</span>
+                <span class="tag">IoT</span>
+              </div>
+              <div class="proj-links">
+                <a href="https://github.com/YashDhame9906/Neolight.git" class="proj-link" title="GitHub">GitHub ⌥</a>
+                <a href=" https://wokwi.com/projects/464519388328526849" class="proj-link" title="Live">Live ↗</a>
+              </div>
+            </div>
+            <div class="proj-row-shot">
+              <img src="Assets/screenshots/Neolight.png" alt="Neolight screenshot" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <!-- More Projects -->
+        <div class="proj-row proj-row-reverse fade-in">
+          <p class="proj-num">MORE PROJECT>></p>
+          <div class="proj-row-card">
+            <div class="proj-row-shot">
+              <img src="Assets/screenshots/git.jpg" alt="SnapFeed screenshot" loading="lazy">
+            </div>
+            <div class="proj-row-info">
+              <div class="proj-name">Visit GitHub <br>for More Projects</div>
+              <p class="proj-desc">Explore my GitHub to discover more of my projects, experiments, and development work, showcasing my skills, creativity, and continuous learning.</p>
+              
+              <div class="proj-links">
+                <a href="https://github.com/YashDhame9906?tab=repositories" class="proj-link11" title="GitHub">GitHub : YashDhame9906 ⌥</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+
+      <p class="sec-label">03 // skills</p>
+
+      <h2 class="sec-title">
+        My tech<br>stack.
+      </h2>
+
+      <div class="skills-layout">
+
+        <!-- FRONTEND -->
+        <div class="skill-group fade-in">
+          <div class="sg-title">frontend</div>
+          <div class="skill-badges">
+            <span class="skill-badge" data-tier="advanced"><span class="skill-name">HTML5</span><span
+                class="skill-tier">Advanced</span></span>
+            <span class="skill-badge" data-tier="advanced"><span class="skill-name">CSS3</span><span
+                class="skill-tier">Advanced</span></span>
+            <span class="skill-badge" data-tier="advanced"><span class="skill-name">JavaScript</span><span
+                class="skill-tier">Advanced</span></span>
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">React.js</span><span
+                class="skill-tier">Intermediate</span></span>
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">Tailwind CSS</span><span
+                class="skill-tier">Intermediate</span></span>
+          </div>
+        </div>
+
+        <!-- BACKEND -->
+        <div class="skill-group fade-in">
+          <div class="sg-title">backend</div>
+          <div class="skill-badges">
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">Node.js</span><span
+                class="skill-tier">Intermediate</span></span>
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">Express.js</span><span
+                class="skill-tier">Intermediate</span></span>
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">MongoDB</span><span
+                class="skill-tier">Intermediate</span></span>
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">REST APIs</span><span
+                class="skill-tier">Intermediate</span></span>
+          </div>
+        </div>
+
+        <!-- PROGRAMMING -->
+        <div class="skill-group fade-in">
+          <div class="sg-title">programming</div>
+          <div class="skill-badges">
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">Java</span><span
+                class="skill-tier">Intermediate</span></span>
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">Python</span><span
+                class="skill-tier">Intermediate</span></span>
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">C</span><span
+                class="skill-tier">Intermediate</span></span>
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">Data Structures &
+                Algorithms</span><span class="skill-tier">Intermediate</span></span>
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">OOP Concepts</span><span
+                class="skill-tier">Intermediate</span></span>
+          </div>
+        </div>
+
+        <!-- TOOLS & DATA -->
+        <div class="skill-group fade-in">
+          <div class="sg-title">tools & data</div>
+          <div class="skill-badges">
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">Git / GitHub</span><span
+                class="skill-tier">Intermediate</span></span>
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">VS Code</span><span
+                class="skill-tier">Intermediate</span></span>
+            <span class="skill-badge" data-tier="advanced"><span class="skill-name">Render / Vercel</span><span
+                class="skill-tier">Advanced</span></span>
+            <span class="skill-badge" data-tier="intermediate"><span class="skill-name">Power BI</span><span
+                class="skill-tier">Intermediate</span></span>
+            <span class="skill-badge" data-tier="advanced"><span class="skill-name">Postman</span><span
+                class="skill-tier">Advanced</span></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume">
+    <div class="container">
+      <p class="sec-label">04 // resume>>></p>
+      <h2 class="sec-title">My<br>resume.</h2>
+
+      <div class="terminal-box resume-card fade-in">
+        <div class="tb-header">
+          <div class="tb-dot tb-red"></div>
+          <div class="tb-dot tb-yellow"></div>
+          <div class="tb-dot tb-green"></div>
+          <div class="tb-title">~ resume.pdf</div>
+        </div>
+        <div class="resume-body">
+          <p class="resume-label">Yash Dhame</p>
+          <br>
+          <h3 class="resume-role">Full-Stack Developer</h3>
+          <br>
+          <!-- <p class="resume-name">Yash Dhame</p> -->
+
+          <div class="resume-sections">
+            <span class="resume-tag">Education</span>
+            <span class="resume-tag">Skills</span>
+            <span class="resume-tag">Projects</span>
+            <span class="resume-tag">Experience</span>
+          </div>
+
+          <div class="resume-actions">
+            <button type="button" class="btn btn-ghost js-preview-resume">View Resume</button>
+            <a href="Yash_Dhame (4).pdf" download class="btn btn-primary">Download PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <p class="sec-label">05 // contact>>></p>
+      <h2 class="sec-title">Let's work<br>together.</h2>
+      <div class="contact-grid">
+        <div class="contact-text fade-in">
+          <br>
+          <p>I am actively looking for opportunities where I can learn, grow & contribute.
+            <br>
+            I’m open to solving problems and building web applications that add value.
+            My inbox is always open for opportunities, collaborations.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:yashdhame12@email.com" class="contact-link">
+              <span class="cl-icon">✉</span>
+              <span class="cl-label">yashdhame12@email.com</span>
+              <span class="cl-arrow">→</span>
+            </a>
+            <a href="https://github.com/YashDhame9906/" class="contact-link" target="_blank">
+              <span class="cl-icon">⌥</span>
+              <span class="cl-label">github.com/YashDhame9906</span>
+              <span class="cl-arrow">→</span>
+            </a>
+            <a href="https://www.linkedin.com/in/yashdhame18/" class="contact-link" target="_blank">
+              <span class="cl-icon">in</span>
+              <span class="cl-label">linkedin.com/in/yashdhame18</span>
+              <span class="cl-arrow">→</span>
+            </a>
+
+
+          </div>
+        </div>
+
+        <!-- Formspree: replace YOUR_FORM_ID below with your real Formspree form ID -->
+        <form class="contact-form fade-in" id="contactForm" action="https://formspree.io/f/xjykezdy" method="POST">
+          <div class="form-group">
+            <label class="form-label">name <span class="req">*</span></label>
+            <input class="form-input" type="text" name="name" placeholder="your name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">email <span class="req">*</span></label>
+            <input class="form-input" type="email" name="email" placeholder="your email" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">message <span class="req">*</span></label>
+            <textarea class="form-textarea" name="message" placeholder="Hey, I'd love to work with you on..."
+              required></textarea>
+          </div>
+          <button type="submit" class="form-submit">send_message();</button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME PREVIEW MODAL -->
+  <div class="modal-overlay" id="resumeModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <span>~ Yash_Dhame_Resume.pdf</span>
+        <button type="button" class="modal-close" id="closeResumeModal" aria-label="Close preview">✕</button>
+      </div>
+      <iframe class="modal-iframe" src="Yash_Dhame (4).pdf" title="Resume preview"></iframe>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>designed &amp; built by <span>Yash</span> &nbsp;·&nbsp; <span>2026</span> &nbsp;·&nbsp; Yash ~ Portfolio</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
